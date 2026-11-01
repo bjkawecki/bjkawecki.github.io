@@ -1,0 +1,78 @@
+# Slug pro Sprache für den Sprachumschalter (page_id -> de/en slug)
+# Muss mit dem Dateinamen-Teil nach dem Datum übereinstimmen (z. B. 2026-02-01-SLUG.md)
+
+wissen-als-unternehmensressource:
+  de: wissen-als-unternehmensressource
+  en: knowledge-as-a-business-asset
+
+schmiermittel-wissensmanagement:
+  de: schmiermittel-fuer-gutes-wissensmanagement
+  en: what-smooths-knowledge-work
+
+wissen-weitergeben-oder-bei-null-beginnen:
+  de: wissen-weitergeben-oder-bei-null-beginnen
+  en: pass-knowledge-on-or-start-from-scratch
+
+magie-des-dokumentierens:
+  de: die-magie-des-dokumentierens
+  en: the-magic-of-documenting
+
+dokumentationsschuld:
+  de: dokumentationsschuld
+  en: recognizing-documentation-debt
+
+strukturierte-dokumentation:
+  de: strukturierte-dokumentation
+  en: why-structured-documentation
+
+abschied-bajkal:
+  de: abschied-von-bajkal-ausblick-auf-den-nachfolger
+  en: saying-goodbye-to-bajkal-ooking-ahead-to-its-successor
+
+digital-lernen-I:
+  de: digital-lernen-I-eine-webapp-für-russisch-sprachschueler
+  en: digital-learning-I-a-web-app-for-russian-Language-learners
+
+lern-apps-anki:
+  de: lern-apps-interaktiv-russisch-lernen-anki
+  en: language-learning-apps-reviewed-anki
+
+lern-apps-interaktiv:
+  de: lern-apps-interaktiv-russisch-lernen
+  en: language-learning-apps-learning-russian-interactively
+
+digital-lernen-II:
+  de: digital-lernen-II-lineares-lernmaterial
+  en: digital-learning-ii-linear-learning-materials
+
+digital-lernen-III:
+  de: digital-lernen-III-das-problem-mit-muedem-papier
+  en: digital-learning-iii-the-problem-with-tired-paper
+
+digital-lernen-IV:
+  de: digital-lernen-IV-auswendiglernen
+  en: digital-learning-iv-learning-by-heart
+
+digital-lernen-V:
+  de: digital-lernen-V-vokabeln
+  en: digital-learning-v-vocabulary
+
+digital-lernen-VI:
+  de: digital-lernen-VI-spezialisierung
+  en: digital-learning-vi-specialization
+
+digital-lernen-VII:
+  de: digital-lernen-VII-offenheit
+  en: digital-learning-vii-openness
+
+digital-lernen-VIII:
+  de: digital-lernen-VIII-apps
+  en: digital-learning-viii-apps
+
+digital-lernen-IX:
+  de: digital-lernen-IX-das-domaene-problem
+  en: digital-learning-ix-the-domain-problem
+
+digital-lernen-X:
+  de: digital-lernen-X-resuemee
+  en: digital-learning-X-resueme

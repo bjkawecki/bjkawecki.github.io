@@ -1,0 +1,217 @@
+aside:
+  profession: "Software Developer · Knowledge Management"
+  location: "Berlin"
+  profile_alt: "Portrait of Björn Kawecki"
+navigation:
+  start: "Blog"
+  about_me: "About me"
+  profile: "Profile"
+  thesis: "Thesis"
+  field: "Fields"
+  webentwicklung: "Software Development"
+  documentation_engineering: "Knowledge Management"
+  projects: "Projects"
+  services: "Software Development"
+  blog: "Blog"
+  contact: "Contact"
+header:
+  menu_open: "Open menu"
+  menu_close: "Close menu"
+  contact_cta: "Contact"
+  contact_cta_href: "mailto:post@bjoernkawecki.de"
+  about_menu_label: "Open profile menu"
+  field_menu_label: "Open fields menu"
+head:
+  description: "Björn Kawecki – blog on documentation, software, and knowledge structures."
+  og_locale: "en_US"
+  title: "Björn Kawecki"
+  name: "Björn Kawecki"
+  feed_title: "Björn Kawecki"
+  feed_subtitle: "Documentation and knowledge structures."
+footer:
+  pages: "Pages"
+  site: "Site"
+  impressum: "Legal notice"
+  datenschutz: "Privacy policy"
+  focus: "Focus"
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  github_label: "Open Björn Kawecki's GitHub profile"
+  linkedin_label: "Open Björn Kawecki's LinkedIn profile"
+  email_label: "Send an email to Björn Kawecki"
+  theme_toggle_label: "Toggle color theme"
+  language_label: "Switch language to"
+  note: "Built with Jekyll & GitHub Pages."
+  rss: "RSS"
+  rss_label: "Atom feed of blog posts"
+language_name: "English"
+language_code: "EN"
+home:
+  geschichte:
+    title: "About"
+    anchor: "about"
+    paragraphs:
+      - "My name is Björn. I live in Berlin and have been working as an application developer since 2025."
+      - "After graduating in Russian studies I worked as an editor for a while and then moved into tech."
+      - "I had already started programming during my studies. In 2020 I began a web app for learning Russian. It became a long-term project that continues today as [Filingo](/projects/filingo/)."
+      - "My software project [DocsOps](/projects/docs-ops/) grew out of my thinking on knowledge management in companies. To companies that see problems of their own, I offer [support](/knowledge-management/)."
+      - "For implementing my projects I rely heavily on AI. More about my approach is on the [Software Development](/software-development/) page."
+  fachgebiete:
+    title: "Fields"
+    anchor: "fields"
+    intro: "Two areas, one shared goal: making knowledge and systems lastingly usable."
+    items:
+      - title: "Software Development"
+        description: "Building systems where decisions and knowledge matter as much as code."
+        href: "/software-development/"
+        cta: "Software Development"
+      - title: "Knowledge Management"
+        description: "Technical documentation and knowledge structures that grow with the system."
+        href: "/knowledge-management/"
+        cta: "Knowledge Management"
+  projects:
+    title: "Projects"
+    description: "Selected examples from software development and documentation."
+    cta_label: "All projects"
+    cta_href: "/projects/"
+    all_label: "All projects"
+    menu_label: "Open projects menu"
+    read_more: "Learn more"
+  blog:
+    eyebrow: "Björn Kawecki · Berlin"
+    title: "Notes on structure, software, and documentation"
+    description: "Writing on documentation engineering, knowledge management, and working with complex information."
+    read_more: "Read more"
+  contact:
+    anchor: "contact"
+    title: "Contact"
+    subtitle: "Send me a short message — I’ll get back to you promptly."
+    primary_cta_label: "Send email"
+    primary_cta_href: "mailto:post@bjoernkawecki.de"
+  solutions:
+    items:
+      - title: "Web Applications"
+        outcome: "Browser-facing interfaces and backends — from requirements to deploy."
+        tech:
+          - JavaScript
+          - TypeScript
+          - React
+          - Python
+          - FastAPI
+          - PostgreSQL
+      - title: "APIs & Integration"
+        outcome: "Build interfaces, connect data, and wire existing systems together."
+        tech:
+          - REST API
+          - AI
+          - Web Scraping
+          - Automation
+          - Data Processing
+      - title: "Delivery & Ops"
+        outcome: "Ship web apps reliably: CI/CD, containers, and hosting."
+        tech:
+          - Docker
+          - Linux
+          - GitHub Actions
+          - Nginx
+          - AWS
+softwareentwicklung:
+  title: "Software Development"
+  intro:
+    - "As capable AI tools see wider use, the focus in software development is shifting. Pure implementation, meaning writing and generating code, becomes more efficient. That creates capacity for other parts of development: understanding requirements, making decisions, documenting relationships, and evolving systems."
+    - "Software development is therefore more closely tied to product development today: what gets built, for whom, and with what effects on operations, maintainability, and future development?"
+  before_diagram: []
+  diagram:
+    aria_label: "Software product at the center, development process inside, product dimensions outside with example questions"
+    center:
+      - "Software"
+      - "product"
+    legend: "Inner: development process · Outer: product dimensions"
+    process:
+      - "Requirement"
+      - "Decision"
+      - "Implementation"
+      - "Documentation"
+    dimensions:
+      - label: "UI / UX"
+        question: "How are users guided through the application? How are complex flows made understandable?"
+      - label: "Backend"
+        question: "Which parts should be custom-built? Which tasks can frameworks or existing components take on?"
+      - label: "Data"
+        question: "Which relationships need to be represented? How can the data model change as requirements grow?"
+      - label: "Interfaces"
+        question: "Which areas should external platforms or services own? What dependencies does that create?"
+      - label: "Operations"
+        question: "How is it monitored whether a system is working? How are failures detected and investigated?"
+      - label: "Architecture"
+        question: "How is the system divided into maintainable parts? How do interfaces between those parts stay stable?"
+  after_diagram:
+    - "The development process connects requirement, decision, implementation, and documentation. Alongside the code, assumptions, decisions, and hard-won experience emerge. Documentation records those relationships and keeps them available for later changes."
+    - "Good decisions depend on understanding the different dimensions of software. The better those dimensions are understood, the more precisely requirements can be framed and the right questions asked."
+  closing:
+    paragraphs:
+      - "I see this as a positive development: Growing automation of implementation creates room for software development in which understanding the product and its dimensions moves more firmly into the center. The capacity that becomes available opens the possibility of strengthening requirements, decisions, implementation, and documentation as equal parts."
+docs_engineering:
+  hero:
+    headline: "Make your organisation’s knowledge usable"
+    lead: "I help organisations and IT teams turn their knowledge about systems, projects, and workflows into structures that hold up in daily work: findable, current, and independent of individual people."
+  problem:
+    heading: "Inaccessible knowledge is a risk"
+    paragraphs:
+      - "“How do we do this again?” “Is there documentation for this?” “Is the guide still up to date?” Questions like these come up when experience and context exist only in people’s heads."
+      - "When an experienced colleague leaves the team, the knowledge about workflows, decisions, and edge cases leaves with him. And new colleagues spend weeks piecing together what could have been documented."
+      - "That costs time and creates dependencies: follow-up questions interrupt work, outdated instructions lead people astray, and the same knowledge is worked out again and again or drifts apart."
+      - "Organisations invest a lot in software, infrastructure, and processes. The knowledge about them grows every day, but is rarely maintained with the same care."
+    chaos_alt: "Scattered documents and folders"
+  solution:
+    heading: "From scattered knowledge to clear structures"
+    paragraphs:
+      - "For knowledge to stay usable, it takes more than individual documents: clear structures, defined responsibilities, and regular maintenance. This systematic approach is called Documentation Engineering: documentation is treated like a system that grows with the organisation."
+      - "That is exactly where I support you: I analyse what knowledge exists and where the gaps are, organise existing content, and build clear structures, for software and infrastructure as well as for workflows, responsibilities, and internal processes."
+      - "The result is a knowledge base your team actually works with: a repository with a clear logic, documented workflows, and standards that assign new content to the right place on their own."
+    order_alt: "Structured documentation hierarchy"
+  approach:
+    heading: "How we work together"
+    paragraphs:
+      - "Collaboration starts with a concrete problem or area, for example a system without documentation or onboarding that takes too long. In an initial conversation we clarify the starting point and goal; after that come the analysis of existing structures, the planning of scope and priorities, and step-by-step delivery."
+      - "Often the outside perspective helps: it shows what is missing, what is duplicated, and where structures are unclear, blind spots that go unnoticed in daily work. Good collaboration needs little from your side, but it matters: a clearly defined scope, a fixed contact person for questions, access to the relevant information, and subject-matter input when context is needed."
+      - "I work in the systems you already use. New tools only become part of the solution when they bring clear value. I use AI deliberately to draft and structure content; context, decisions, and responsibility stay with people."
+  closing:
+    text: "Want to know where your organisation stands on documentation and knowledge management? In a no-obligation conversation you will get an initial assessment and concrete next steps."
+    cta_label: "Request a conversation"
+slavistik:
+  heading: "My thesis"
+  work_title: "Soviet Literature and Emigration"
+  subtitle: "The literary programme of the Posev publishing house in the Thaw period"
+  cover_alt: "Cover of the master's thesis Soviet Literature and Emigration"
+  download_label: "Download PDF"
+  download_aria: "Download the master's thesis as PDF"
+  amazon_label: "Book on Amazon"
+  amazon_aria: "Open the book on Amazon"
+  amazon_href: "https://www.amazon.de/dp/B0HFCWDCHB"
+  enlarge_aria: "Enlarge cover"
+  close_aria: "Close"
+  intro:
+    - "From 2013 to 2021 I studied Russian studies at the University of Freiburg. Here I am making my master's thesis available in a revised edition."
+  overview:
+    - "How did a small émigré press become a voice of resistance against an empire? This thesis examines the history of Posev, which promoted Russian exile literature, smuggled banned texts into the Soviet Union, and was closely linked to the anti-communist NTS movement."
+    - "From refugee camps to global influence, it traces the development of a literary programme meant to cross political and cultural borders: the power of literature in the field of tension between ideology, history, and identity."
+  disclaimer: "Master's thesis, University of Freiburg, defended on 3 May 2021. This is the revised edition (as of August 2026) with linguistic and typographic corrections."
+pagination:
+  previous_page: Previous page
+  page: Page
+  of: of
+  next_page: Next page
+  previous_post: Previous post
+  next_post: Next post
+layout:
+  category: Category
+  back_to_list: All Blog Posts
+  back_to_home: Back to home
+  back_to_projects: All projects
+no_entries:
+  blog: No entries yet.
+  projects: No projects found.
+errors:
+  404_title: "Error 404"
+  404_message: "Page not found"

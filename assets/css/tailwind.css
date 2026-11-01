@@ -1,0 +1,398 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode — clearer ink blue on warmer gray */
+:root {
+  --accent-50: #e8f1f7;
+  --accent-100: #cfe2ef;
+  --accent-200: #9fc5dd;
+  --accent-300: #6aa3c4;
+  --accent-400: #3a84ad;
+  --accent-500: #1a6f9c;
+  --accent-600: #155f88;
+  --accent-700: #124e70;
+  --accent-800: #113f5a;
+  --accent-900: #12344a;
+  --accent-950: #0b2130;
+}
+
+/* Dark mode — soft teal/sage on charcoal */
+.dark {
+  --accent-50: #0a1614;
+  --accent-100: #0f2420;
+  --accent-200: #163530;
+  --accent-300: #1f4a43;
+  --accent-400: #5aa89c;
+  --accent-500: #6bb3a8;
+  --accent-600: #0d7377;
+  --accent-700: #8fc9bf;
+  --accent-800: #b5ddd6;
+  --accent-900: #d8ede9;
+  --accent-950: #eef7f5;
+}
+
+@layer base {
+  html {
+    font-family: "Golos Text", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  ul, ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+}
+
+@layer components {
+  /* Link-Hover nur für den gehoverteten Link (nicht alle bei Artikel-Hover) */
+  .prose-links-hover a:hover {
+    color: var(--accent-500);
+  }
+  .dark .prose-links-hover a:hover {
+    color: var(--accent-700);
+  }
+
+  /* Text fließt um vertikal mittig floatende Grafik (md+) */
+  .docs-float-wrap {
+    display: flow-root;
+  }
+
+  .docs-float-wrap__push {
+    display: none;
+  }
+
+  .docs-float-wrap__figure {
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .docs-float-wrap__figure--chaos {
+    max-width: 19rem;
+  }
+
+  @media (min-width: 768px) {
+    /*
+      Push-Float senkt die Figur optisch in die Textmitte.
+      Höhe ≈ Hälfte der Figur (22rem × 293/352 ≈ 18.3rem → ~9rem),
+      abzüglich etwas Luft, damit bei 2 Absätzen die Mitte trifft.
+    */
+    .docs-float-wrap__push {
+      display: block;
+      float: right;
+      width: 0;
+      height: 5.5rem;
+    }
+
+    .docs-float-wrap--chaos .docs-float-wrap__push {
+      height: 5rem;
+    }
+
+    .docs-float-wrap--order .docs-float-wrap__push {
+      height: 3rem;
+    }
+
+    .docs-float-wrap__figure {
+      float: right;
+      clear: right;
+      margin-inline: 0;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      width: 22rem;
+      max-width: none;
+    }
+
+    .docs-float-wrap__figure--chaos {
+      width: 20.5rem;
+    }
+  }
+}
+
+/* Domain-Diagramm / Radar-Modell (außerhalb @layer)
+   Innerer Prozess-Kreis r22 · Radar-Strahlen · Dimensionen im äußeren Feld
+   Prozess-Labels N/O/S/W · Dimensionen alle 60° auf den Strahlen */
+.software-diagram {
+  margin-inline: auto;
+  width: min(100%, 34rem);
+  overflow: visible;
+}
+
+@media (max-width: 40rem) {
+  .software-diagram {
+    width: min(100%, 22rem);
+  }
+}
+
+.software-diagram__canvas {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  overflow: visible;
+}
+
+.software-diagram__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.software-diagram__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.software-diagram__center-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 7rem;
+}
+
+.software-diagram__center-line {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--accent-600);
+}
+
+.dark .software-diagram__center-line {
+  color: var(--accent-400);
+}
+
+.software-diagram__label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.software-diagram__label--tip {
+  z-index: 2;
+}
+
+.software-diagram__chip {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  background-color: #f8f5f1;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #1a1c1b;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-600) 42%, transparent);
+}
+
+.software-diagram__trigger {
+  cursor: pointer;
+  border: 0;
+  font: inherit;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.software-diagram__trigger:focus-visible {
+  outline: 2px solid var(--accent-600);
+  outline-offset: 2px;
+}
+
+.dark .software-diagram__trigger:focus-visible {
+  outline-color: var(--accent-400);
+}
+
+.dark .software-diagram__chip {
+  background-color: #2a2a2e;
+  color: #f3f4f6;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-400) 45%, transparent);
+}
+
+/* Äußere Dimensionen */
+.software-diagram__chip--plain {
+  background-color: #f8f5f1;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-600) 30%, transparent);
+  padding: 0.3rem 0.55rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.dark .software-diagram__chip--plain {
+  background-color: #2a2a2e;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-400) 34%, transparent);
+  color: #e5e7eb;
+}
+
+/* Offen: Frage sichtbar → Label als aktiv markiert */
+.software-diagram__label--tip.is-open .software-diagram__chip--plain {
+  background-color: #cfc2b4;
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent-600) 65%, transparent);
+}
+
+.dark .software-diagram__label--tip.is-open .software-diagram__chip--plain {
+  background-color: #3f3f46;
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent-400) 70%, transparent);
+}
+
+/* Push nur während des Drückens (auch wenn schon offen / zweiter Klick) */
+.software-diagram__chip--plain:active,
+.software-diagram__label--tip.is-open .software-diagram__chip--plain:active {
+  background-color: #b5a494;
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--accent-600) 85%, transparent);
+}
+
+.dark .software-diagram__chip--plain:active,
+.dark .software-diagram__label--tip.is-open .software-diagram__chip--plain:active {
+  background-color: #27272a;
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--accent-400) 90%, transparent);
+}
+
+.software-diagram__tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5rem);
+  transform: translateX(-50%);
+  z-index: 5;
+  width: max-content;
+  max-width: min(20rem, 80vw);
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.375rem;
+  background-color: #1a1c1b;
+  color: #f3f4f6;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  box-shadow: 0 4px 16px color-mix(in srgb, #000 18%, transparent);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease, visibility 0.12s ease;
+}
+
+.software-diagram__tooltip--below {
+  bottom: auto;
+  top: calc(100% + 0.5rem);
+}
+
+.dark .software-diagram__tooltip {
+  background-color: #f3f4f6;
+  color: #1a1c1b;
+}
+
+/* Sichtbar nur bei Klick (.is-open via JS) */
+.software-diagram__label--tip.is-open .software-diagram__tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.software-diagram__label--tip.is-open {
+  z-index: 6;
+}
+
+@media (max-width: 40rem) {
+  .software-diagram__center-line {
+    font-size: 0.8125rem;
+  }
+
+  .software-diagram__chip {
+    padding: 0.28rem 0.45rem;
+    font-size: 0.75rem;
+  }
+
+  .software-diagram__chip--plain {
+    padding: 0.22rem 0.4rem;
+    font-size: 0.6875rem;
+  }
+
+  .software-diagram__tooltip {
+    max-width: min(18rem, 86vw);
+    font-size: 0.875rem;
+    padding: 0.65rem 0.8rem;
+  }
+}
+
+/* Prozess: Chip-Mittelpunkt auf der Kreislinie (r=22%), N/O/S/W, Text horizontal.
+   Pfeile sitzen zentriert dazwischen (45°/135°/225°/315°). */
+.software-diagram__process--0 { left: 50%; top: 28%; }   /* 0°   Anforderung */
+.software-diagram__process--1 { left: 72%; top: 50%; }   /* 90°  Entscheidung */
+.software-diagram__process--2 { left: 50%; top: 72%; }   /* 180° Umsetzung */
+.software-diagram__process--3 { left: 28%; top: 50%; }   /* 270° Dokumentation */
+
+/* Dimensionen: auf den Radar-Strahlen (alle 60°), leicht versetzt im äußeren Feld */
+.software-diagram__dimension--0 { left: 50%; top: 5%; }      /* 0°   r≈45 */
+.software-diagram__dimension--1 { left: 88%; top: 28%; }     /* 60°  r≈44 */
+.software-diagram__dimension--2 { left: 88%; top: 72%; }     /* 120° r≈44 */
+.software-diagram__dimension--3 { left: 50%; top: 95%; }     /* 180° r≈45 */
+.software-diagram__dimension--4 { left: 12%; top: 72%; }     /* 240° r≈44 */
+.software-diagram__dimension--5 { left: 12%; top: 28%; }     /* 300° r≈44 */
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("../fonts/golos-text-cyrillic-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("../fonts/golos-text-cyrillic-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("../fonts/golos-text-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("../fonts/golos-text-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

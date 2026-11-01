@@ -1,0 +1,11 @@
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+.vscode
+settings.json
+about.txt
+todo.md
+plan/
+_site/

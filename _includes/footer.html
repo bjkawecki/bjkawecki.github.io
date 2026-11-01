@@ -1,0 +1,55 @@
+{% assign current_lang = site.active_lang | default: site.default_lang | default: 'de' %}
+{% assign strings = site.data[current_lang].strings %}
+{% assign nav = strings.navigation %}
+{% assign footer = strings.footer %}
+{% assign lang_prefix = '' %}
+{% unless current_lang == site.default_lang %}
+{% assign lang_prefix = '/' | append: current_lang %}
+{% endunless %}
+{% assign footer_projects = site.projects | where: "lang", current_lang | sort: "title" %}
+<footer class="mt-20 border-t border-brand-200/80 dark:border-zinc-800">
+  <div class="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
+    <div class="mx-auto w-fit max-w-full">
+      <div class="flex flex-col gap-12 text-sm sm:flex-row sm:flex-wrap sm:gap-x-12 xl:gap-x-20">
+        <div class="min-w-[11rem] space-y-4">
+          <p class="font-medium text-gray-900 dark:text-gray-100">Björn Kawecki</p>
+          <div class="flex flex-col gap-3">
+            <a href="mailto:post@bjoernkawecki.de" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400" aria-label="{{ footer.email_label }}">post@bjoernkawecki.de</a>
+            <a href="https://github.com/bjkawecki" target="_blank" rel="noopener noreferrer" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400" aria-label="{{ footer.github_label }}">{{ footer.github }}</a>
+            <a href="https://www.linkedin.com/in/bj%C3%B6rn-kawecki-937b97305/" target="_blank" rel="noopener noreferrer" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400" aria-label="{{ footer.linkedin_label }}">{{ footer.linkedin }}</a>
+          </div>
+        </div>
+        <div class="min-w-[11rem] space-y-4">
+          <p class="font-medium text-gray-900 dark:text-gray-100">{{ nav.profile }}</p>
+          <div class="flex flex-col gap-3">
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/ueber-mich/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.about_me }}</a>
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/abschlussarbeit/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.thesis }}</a>
+          </div>
+        </div>
+        <div class="min-w-[11rem] space-y-4">
+          <p class="font-medium text-gray-900 dark:text-gray-100">{{ footer.focus }}</p>
+          <div class="flex flex-col gap-3">
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/software-development/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.webentwicklung }}</a>
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/knowledge-management/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.documentation_engineering }}</a>
+            {% for project in footer_projects %}
+            <a href="{{ project.url }}" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ project.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="min-w-[11rem] space-y-4">
+          <p class="font-medium text-gray-900 dark:text-gray-100">{{ footer.site }}</p>
+          <div class="flex flex-col gap-3">
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.blog }}</a>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ lang_prefix }}/feed.xml" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400" type="application/atom+xml" aria-label="{{ footer.rss_label }}">{{ footer.rss }}</a>
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/impressum/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ footer.impressum }}</a>
+            <a href="{{ site.baseurl }}{{ lang_prefix }}/datenschutz/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ footer.datenschutz }}</a>
+          </div>
+        </div>
+      </div>
+      <p class="mt-14 text-xs text-gray-500 dark:text-gray-400">
+        &copy; {{ 'now' | date: "%Y" }} Björn Kawecki · {{ footer.note }}
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/index.js"></script>

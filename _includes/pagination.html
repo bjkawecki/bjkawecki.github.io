@@ -1,0 +1,23 @@
+<div class="mt-16 flex items-center justify-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+  {% if paginator.previous_page %}
+  <a
+    href="{{ paginator.previous_page_path }}"
+    class="inline-flex items-center rounded-lg border border-gray-200 px-3 py-2 font-medium transition hover:border-accent-400 hover:text-accent-600 dark:border-zinc-700 dark:hover:border-accent-500 dark:hover:text-accent-400"
+    aria-label="{{ site.data[site.active_lang].strings.pagination.previous_page }}"
+  >
+    {% include icons/chevron-left.html class="h-5 w-5" %}
+  </a>
+  {% endif %}
+  <span>
+    {{ site.data[site.active_lang].strings.pagination.page }} {{ paginator.page }} {{ site.data[site.active_lang].strings.pagination.of }} {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+  <a
+    href="{{ paginator.next_page_path }}"
+    class="inline-flex items-center rounded-lg border border-gray-200 px-3 py-2 font-medium transition hover:border-accent-400 hover:text-accent-600 dark:border-zinc-700 dark:hover:border-accent-500 dark:hover:text-accent-400"
+    aria-label="{{ site.data[site.active_lang].strings.pagination.next_page }}"
+  >
+    {% include icons/chevron-right.html class="h-5 w-5" %}
+  </a>
+  {% endif %}
+</div>

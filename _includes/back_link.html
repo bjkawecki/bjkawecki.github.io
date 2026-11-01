@@ -1,0 +1,9 @@
+{% assign back_label = include.label | default: site.data[site.active_lang].strings.layout.back_to_list %}
+<p class="not-prose mb-5">
+  <a
+    href="{{ include.link }}"
+    class="text-sm font-semibold text-accent-600 transition hover:text-accent-500 dark:text-accent-400 dark:hover:text-accent-700"
+  >
+    {{ back_label }}
+  </a>
+</p>
