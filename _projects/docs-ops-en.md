@@ -4,7 +4,7 @@ lang: en
 page_id: docs-ops
 title: DocsOps
 permalink: /projects/docs-ops/
-description: Open-source platform for binding organisational knowledge, grown from thinking about knowledge management.
+description: Source-available platform for binding organisational knowledge, grown from thinking about knowledge management.
 external_links:
   - url: https://docsops.de
     label: To the website
@@ -14,7 +14,7 @@ external_links:
     label: To the GitHub repo
 ---
 
-**DocsOps** is a self-hosted open-source platform for internal organisational knowledge.
+**DocsOps** is a self-hosted, source-available platform for internal organisational knowledge.
 
 It is meant to help when an organisation is unclear about which knowledge state counts and who is responsible for creating and releasing it.
 

@@ -4,7 +4,7 @@ lang: de
 page_id: docs-ops
 title: DocsOps
 permalink: /projects/docs-ops/
-description: Open-Source-Plattform für verbindliches Organisationswissen, entstanden aus Überlegungen zum Wissensmanagement.
+description: Quelloffene Plattform für verbindliches Organisationswissen, entstanden aus Überlegungen zum Wissensmanagement.
 external_links:
   - url: https://docsops.de
     label: Zur Website
@@ -14,7 +14,7 @@ external_links:
     label: Zum GitHub-Repo
 ---
 
-**DocsOps** ist eine self-hosted Open-Source-Plattform für internes Organisationswissen.
+**DocsOps** ist eine self-hosted, quelloffene Plattform für internes Organisationswissen.
 
 Sie soll helfen, wenn in einer Organisation unklar bleibt, welcher Wissensstand gilt und wer für Erstellung und Freigabe zuständig ist.
 
