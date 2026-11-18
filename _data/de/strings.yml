@@ -6,7 +6,7 @@ navigation:
   start: "Blog"
   about_me: "Über mich"
   profile: "Profil"
-  thesis: "Abschlussarbeit"
+  thesis: "Texte"
   field: "Fachgebiet"
   webentwicklung: "Softwareentwicklung"
   documentation_engineering: "Wissensmanagement"
@@ -81,6 +81,11 @@ home:
     eyebrow: "Björn Kawecki · Berlin"
     title: "Gedanken zu Struktur, Software und Dokumentation"
     description: "Beiträge zu Documentation Engineering, Wissensmanagement und der Arbeit mit komplexen Informationen."
+    welcome: "Willkommen"
+    welcome_text: "Meine Gedanken zu digitaler Didaktik, Wissensarbeit und Lernsoftware."
+    categories_label: "Kategorien"
+    all_posts: "Alle Beiträge"
+    menu_label: "Blog öffnen"
     read_more: "Weiterlesen"
   contact:
     anchor: "kontakt"
@@ -180,7 +185,7 @@ docs_engineering:
     text: "Sie möchten wissen, wo Ihre Organisation beim Thema Dokumentation und Wissensmanagement steht? In einem unverbindlichen Gespräch erhalten Sie eine erste Einschätzung und konkrete nächste Schritte."
     cta_label: "Gespräch anfragen"
 slavistik:
-  heading: "Meine Abschlussarbeit"
+  heading: "Texte"
   work_title: "Sowjetische Literatur und Emigration"
   subtitle: "Das literarische Programm des Posev-Verlags in der Periode des Tauwetters"
   cover_alt: "Deckblatt der Masterarbeit Sowjetische Literatur und Emigration"
@@ -197,6 +202,11 @@ slavistik:
     - "Wie wurde ein kleiner Emigrantenverlag zu einer Stimme des Widerstands gegen ein Weltreich? Diese Arbeit untersucht die Geschichte des Posev-Verlags, der russische Exilliteratur förderte, verbotene Texte in die Sowjetunion schmuggelte und eng mit der antikommunistischen Bewegung NTS verbunden war."
     - "Von Flüchtlingslagern bis zu globaler Einflussnahme wird die Entwicklung eines literarischen Programms beleuchtet, das politische und kulturelle Grenzen überschreiten sollte. Es geht um die Macht von Literatur im Spannungsfeld von Ideologie, Geschichte und Identität."
   disclaimer: "Masterarbeit, Albert-Ludwigs-Universität Freiburg, verteidigt am 3. Mai 2021. Hier die überarbeitete Fassung (Stand August 2026) mit sprachlichen und typografischen Korrekturen."
+post:
+  series_title: "Weitere Beiträge dieser Reihe"
+  reading_time_one: "1 Min. Lesezeit"
+  reading_time_other: "%d Min. Lesezeit"
+  language_version: "English version"
 pagination:
   previous_page: Vorherige Seite
   page: Seite

@@ -45,12 +45,41 @@
 }
 
 @layer components {
+  /* Mobile-Nav offen: Header undurchsichtig, kein Blog-Durchscheinen */
+  #site-header.is-nav-open {
+    background-color: #ebe4dc; /* brand-50 */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .dark #site-header.is-nav-open {
+    background-color: #161918; /* brand-950 */
+  }
+
+  /* Artikel: Filingo-näherer Kontrast + Links (unterstrichen, Farbe erst bei Hover) */
+  .article-prose {
+    --tw-prose-body: #1f2937; /* gray-800 */
+    --tw-prose-headings: #111827; /* gray-900 */
+    --tw-prose-links: #1f2937;
+    --tw-prose-bold: #111827;
+    --tw-prose-invert-body: #ebebeb;
+    --tw-prose-invert-headings: #f4f4f5;
+    --tw-prose-invert-links: #ebebeb;
+    --tw-prose-invert-bold: #f4f4f5;
+  }
+
+  .article-prose a {
+    text-decoration-line: underline;
+    text-underline-offset: 0.15em;
+    font-weight: 500;
+  }
+
   /* Link-Hover nur für den gehoverteten Link (nicht alle bei Artikel-Hover) */
   .prose-links-hover a:hover {
-    color: var(--accent-500);
+    color: var(--accent-600);
   }
   .dark .prose-links-hover a:hover {
-    color: var(--accent-700);
+    color: var(--accent-400);
   }
 
   /* Text fließt um vertikal mittig floatende Grafik (md+) */

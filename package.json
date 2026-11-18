@@ -1,9 +1,12 @@
 {
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.1",
     "postcss": "^8.4.38",
+    "serve": "^14.2.8",
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
@@ -13,6 +16,9 @@
     "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css && bundle exec jekyll build",
     "serve": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css && npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch & bundle exec jekyll serve --livereload",
     "serve_d": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css && npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch & bundle exec jekyll serve --drafts --livereload",
-    "watch": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
+    "watch": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch",
+    "a11y": "npx playwright test",
+    "a11y:ui": "npx playwright test --ui",
+    "a11y:install": "npx playwright install chromium"
   }
 }

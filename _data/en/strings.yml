@@ -6,7 +6,7 @@ navigation:
   start: "Blog"
   about_me: "About me"
   profile: "Profile"
-  thesis: "Thesis"
+  thesis: "Texts"
   field: "Fields"
   webentwicklung: "Software Development"
   documentation_engineering: "Knowledge Management"
@@ -81,6 +81,11 @@ home:
     eyebrow: "Björn Kawecki · Berlin"
     title: "Notes on structure, software, and documentation"
     description: "Writing on documentation engineering, knowledge management, and working with complex information."
+    welcome: "Welcome"
+    welcome_text: "My thoughts on digital didactics, knowledge work, and learning software."
+    categories_label: "Categories"
+    all_posts: "All posts"
+    menu_label: "Open blog menu"
     read_more: "Read more"
   contact:
     anchor: "contact"
@@ -180,7 +185,7 @@ docs_engineering:
     text: "Want to know where your organisation stands on documentation and knowledge management? In a no-obligation conversation you will get an initial assessment and concrete next steps."
     cta_label: "Request a conversation"
 slavistik:
-  heading: "My thesis"
+  heading: "Texts"
   work_title: "Soviet Literature and Emigration"
   subtitle: "The literary programme of the Posev publishing house in the Thaw period"
   cover_alt: "Cover of the master's thesis Soviet Literature and Emigration"
@@ -197,6 +202,11 @@ slavistik:
     - "How did a small émigré press become a voice of resistance against an empire? This thesis examines the history of Posev, which promoted Russian exile literature, smuggled banned texts into the Soviet Union, and was closely linked to the anti-communist NTS movement."
     - "From refugee camps to global influence, it traces the development of a literary programme meant to cross political and cultural borders: the power of literature in the field of tension between ideology, history, and identity."
   disclaimer: "Master's thesis, University of Freiburg, defended on 3 May 2021. This is the revised edition (as of August 2026) with linguistic and typographic corrections."
+post:
+  series_title: "More posts in this series"
+  reading_time_one: "1 min read"
+  reading_time_other: "%d min read"
+  language_version: "Deutsche Version"
 pagination:
   previous_page: Previous page
   page: Page

@@ -1,0 +1,31 @@
+{% if page.series %}
+  {% assign current_lang = site.active_lang | default: site.default_lang | default: 'de' %}
+  {% assign series_posts = site.posts | where: "lang", current_lang | where: "series", page.series | sort: "series_order" %}
+  {% if series_posts.size > 1 %}
+<nav
+  class="not-prose mx-auto mt-10 max-w-[42rem] border-t border-gray-200 pt-8 dark:border-zinc-700"
+  aria-labelledby="series-posts-title"
+>
+  <h2
+    id="series-posts-title"
+    class="text-lg font-bold tracking-tight text-gray-900 dark:text-zinc-100"
+  >
+    {{ site.data[current_lang].strings.post.series_title }}
+  </h2>
+  <ol class="mt-4 list-decimal space-y-2 pl-5 text-base text-gray-800 dark:text-zinc-200">
+    {% for post in series_posts %}
+    <li class="{% if post.url == page.url %}font-semibold text-gray-900 dark:text-zinc-100{% endif %}">
+      {% if post.url == page.url %}
+      <span>{{ post.title }}</span>
+      {% else %}
+      <a
+        href="{{ post.url }}"
+        class="font-medium text-inherit underline underline-offset-2 transition hover:text-accent-600 dark:hover:text-accent-400"
+      >{{ post.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+  {% endif %}
+{% endif %}

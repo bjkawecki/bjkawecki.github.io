@@ -90,6 +90,8 @@ if (mobileThemeButton) {
   });
 }
 
+const siteHeader = document.getElementById("site-header");
+
 if (mobileNavToggle && mobileNav) {
   const openLabel =
     mobileNavToggle.dataset.openLabel || mobileNavToggle.getAttribute("data-open-label") || "Open menu";
@@ -99,6 +101,11 @@ if (mobileNavToggle && mobileNav) {
   const updateNavState = (isOpen) => {
     mobileNavToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     mobileNav.classList.toggle("hidden", !isOpen);
+    document.documentElement.classList.toggle("overflow-hidden", isOpen);
+    document.body.classList.toggle("overflow-hidden", isOpen);
+    if (siteHeader) {
+      siteHeader.classList.toggle("is-nav-open", isOpen);
+    }
     if (mobileNavIconOpen && mobileNavIconClose) {
       mobileNavIconOpen.classList.toggle("hidden", isOpen);
       mobileNavIconClose.classList.toggle("hidden", !isOpen);

@@ -1,0 +1,34 @@
+{% assign current_lang = site.active_lang | default: site.default_lang | default: 'de' %}
+{% assign blog_strings = site.data[current_lang].strings.home.blog %}
+{% assign lang_prefix = '' %}
+{% unless current_lang == site.default_lang %}
+  {% assign lang_prefix = '/' | append: current_lang %}
+{% endunless %}
+
+<header class="mx-auto max-w-[40rem] space-y-3">
+  <h1 class="text-xl font-bold tracking-tight text-gray-900 dark:text-zinc-100">
+    {{ blog_strings.welcome }}
+  </h1>
+  <p class="text-base leading-relaxed text-gray-700 dark:text-zinc-300">
+    {{ blog_strings.welcome_text }}
+  </p>
+  <nav class="flex flex-wrap gap-2 pt-1 md:hidden" aria-label="{{ blog_strings.categories_label }}">
+    {% assign seen_categories = "" %}
+    {% for category in site.categories %}
+      {% assign cat_name = category[0] %}
+      {% assign cat_posts = category[1] | where: "lang", current_lang %}
+      {% if cat_posts.size > 0 %}
+        {% assign cat_key = cat_name | slugify | prepend: "|" | append: "|" %}
+        {% unless seen_categories contains cat_key %}
+          {% assign seen_categories = seen_categories | append: cat_key %}
+          {% assign category_slug = cat_name | slugify %}
+          {% assign category_href = site.baseurl | append: lang_prefix | append: '/blog/category/' | append: category_slug | append: '/' %}
+          <a
+            href="{{ category_href }}"
+            class="inline-flex items-center rounded-full border border-brand-200 bg-brand-100 px-3.5 py-1.5 text-sm font-medium text-accent-600 no-underline transition hover:border-accent-400 hover:bg-brand-50 dark:border-zinc-600 dark:bg-zinc-800 dark:text-accent-400 dark:hover:border-accent-500 dark:hover:bg-zinc-700"
+          >{{ cat_name }}</a>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+</header>
