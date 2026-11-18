@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light mode — clearer ink blue on warmer gray */
+/* Light mode — Filingo/Mantine blue on gray */
 :root {
-  --accent-50: #e8f1f7;
-  --accent-100: #cfe2ef;
-  --accent-200: #9fc5dd;
-  --accent-300: #6aa3c4;
-  --accent-400: #3a84ad;
-  --accent-500: #1a6f9c;
-  --accent-600: #155f88;
-  --accent-700: #124e70;
-  --accent-800: #113f5a;
-  --accent-900: #12344a;
-  --accent-950: #0b2130;
+  --accent-50: #e7f5ff;  /* blue-0 */
+  --accent-100: #d0ebff; /* blue-1 */
+  --accent-200: #a5d8ff; /* blue-2 */
+  --accent-300: #74c0fc; /* blue-3 */
+  --accent-400: #4dabf7; /* blue-4 */
+  --accent-500: #339af0; /* blue-5 */
+  --accent-600: #228be6; /* blue-6 — Links/Hover */
+  --accent-700: #1c7ed6; /* blue-7 */
+  --accent-800: #1971c2; /* blue-8 */
+  --accent-900: #1864ab; /* blue-9 */
+  --accent-950: #0b4a82;
 }
 
-/* Dark mode — soft teal/sage on charcoal */
+/* Dark mode — soft teal/sage on Filingo dark */
 .dark {
   --accent-50: #0a1614;
   --accent-100: #0f2420;
@@ -47,25 +47,30 @@
 @layer components {
   /* Mobile-Nav offen: Header undurchsichtig, kein Blog-Durchscheinen */
   #site-header.is-nav-open {
-    background-color: #ebe4dc; /* brand-50 */
+    background-color: #eeeeef; /* brand-50 */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
 
   .dark #site-header.is-nav-open {
-    background-color: #161918; /* brand-950 */
+    background-color: #242424; /* brand-950 / dark-7 */
   }
 
-  /* Artikel: Filingo-näherer Kontrast + Links (unterstrichen, Farbe erst bei Hover) */
+  /* Artikel: Filingo/Mantine-Kontrast + Zeilenabstand + Links */
   .article-prose {
-    --tw-prose-body: #1f2937; /* gray-800 */
-    --tw-prose-headings: #111827; /* gray-900 */
-    --tw-prose-links: #1f2937;
-    --tw-prose-bold: #111827;
-    --tw-prose-invert-body: #ebebeb;
-    --tw-prose-invert-headings: #f4f4f5;
-    --tw-prose-invert-links: #ebebeb;
-    --tw-prose-invert-bold: #f4f4f5;
+    line-height: 1.55; /* wie Filingo --mantine-line-height-md */
+    --tw-prose-body: #212529; /* gray-9 */
+    --tw-prose-headings: #212529;
+    --tw-prose-links: #212529;
+    --tw-prose-bold: #212529;
+    --tw-prose-invert-body: #c9c9c9; /* dark-0 */
+    --tw-prose-invert-headings: #c9c9c9;
+    --tw-prose-invert-links: #c9c9c9;
+    --tw-prose-invert-bold: #c9c9c9;
+  }
+
+  .article-prose.prose-lg {
+    line-height: 1.55;
   }
 
   .article-prose a {

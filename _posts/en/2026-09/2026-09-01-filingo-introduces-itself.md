@@ -67,14 +67,6 @@ I am critical of excessive gamification. In Filingo, points, achievements, and a
 
 Customization options are also more extensive. Among other things, you can set a personal daily learning goal, and the appearance of the application can be adapted more closely to your own preferences.
 
-## This blog
-
-With the launch of Filingo, there is also a change in how this blog is positioned.
-
-Previously, it was part of my <a class="link-external" href="https://bjoernkawecki.de" target="_blank" rel="noopener noreferrer">personal website{% include icons/external-link.html %}</a>. Now, at [blog.filingo.app](https://blog.filingo.app/), it is the central place for writing about Filingo, digital pedagogy, and learning Russian. Here I document not only news about the project, but also some of the thinking and decisions behind its development.
-
-Topics unrelated to these areas remain on my personal website.
-
 ## What comes next
 
 The current state is an important milestone for me: Filingo exists and the foundation is in place — yet the application is still far from “finished.”

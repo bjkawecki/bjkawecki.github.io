@@ -31,7 +31,7 @@
       {% if has_prev %}
       <a
         href="{{ prev_post.url }}"
-        class="inline-flex w-full flex-col gap-1 rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-left text-accent-600 transition hover:border-accent-400 hover:text-accent-500 dark:border-zinc-700 dark:bg-brand-900 dark:text-accent-400 dark:hover:border-accent-500 dark:hover:text-accent-700 sm:max-w-[calc(50%-0.5rem)]"
+        class="inline-flex w-full flex-col gap-1 rounded-lg border border-gray-200 bg-brand-100 px-3 py-2.5 text-left text-accent-600 transition hover:border-accent-400 hover:text-accent-500 dark:border-zinc-600 dark:bg-zinc-800 dark:text-accent-400 dark:hover:border-accent-500 dark:hover:text-accent-700 sm:max-w-[calc(50%-0.5rem)]"
       >
         <span class="inline-flex items-center gap-1 text-xs font-medium">
           {% include icons/chevron-left.html class="h-4 w-4" %}
@@ -48,7 +48,7 @@
       {% if has_next %}
       <a
         href="{{ next_post.url }}"
-        class="inline-flex w-full flex-col items-end gap-1 rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-right text-accent-600 transition hover:border-accent-400 hover:text-accent-500 dark:border-zinc-700 dark:bg-brand-900 dark:text-accent-400 dark:hover:border-accent-500 dark:hover:text-accent-700 sm:ml-auto sm:max-w-[calc(50%-0.5rem)]"
+        class="inline-flex w-full flex-col items-end gap-1 rounded-lg border border-gray-200 bg-brand-100 px-3 py-2.5 text-right text-accent-600 transition hover:border-accent-400 hover:text-accent-500 dark:border-zinc-600 dark:bg-zinc-800 dark:text-accent-400 dark:hover:border-accent-500 dark:hover:text-accent-700 sm:ml-auto sm:max-w-[calc(50%-0.5rem)]"
       >
         <span class="inline-flex w-full items-center justify-end gap-1 text-xs font-medium">
           {{ site.data[current_lang].strings.pagination.next_post }}

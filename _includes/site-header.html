@@ -17,8 +17,11 @@
 {% assign field_menu_label = site.data[current_lang].strings.header.field_menu_label | default: nav_strings.field %}
 {% assign about_menu_label = site.data[current_lang].strings.header.about_menu_label | default: nav_strings.profile %}
 {% assign header_strings = site.data[current_lang].strings %}
+{% assign show_knowledge_management = site.features.knowledge_management %}
 {% assign field_active = false %}
-{% if page.url == nav_software_path or page.url == nav_docs_path %}
+{% if page.url == nav_software_path %}
+  {% assign field_active = true %}
+{% elsif show_knowledge_management and page.url == nav_docs_path %}
   {% assign field_active = true %}
 {% endif %}
 {% assign about_active = false %}
@@ -48,7 +51,7 @@
   {% for tongue in site.languages %}
     {% assign language_code = site.data[tongue].strings.language_code | default: tongue | upcase %}
     {% if tongue == site.active_lang %}
-      <span class="inline-flex h-9 min-w-9 items-center justify-center rounded-md bg-accent-100 px-2 text-sm font-medium text-accent-600 dark:bg-white/10 dark:text-accent-400">
+      <span class="inline-flex h-9 min-w-9 items-center justify-center rounded-md bg-accent-100 px-2 text-sm font-medium text-accent-800 dark:bg-white/10 dark:text-accent-400">
         {{ language_code }}
       </span>
     {% else %}
@@ -250,7 +253,9 @@
           >
             <div class="rounded-lg border border-brand-200 bg-brand-50 py-1 shadow-lg dark:border-zinc-700 dark:bg-brand-900">
               <a href="{{ site.baseurl }}{{ nav_software_path }}" role="menuitem" class="block px-4 py-2.5 text-sm text-gray-800 transition hover:bg-brand-100 hover:text-accent-600 dark:text-gray-200 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == nav_software_path %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ nav_strings.webentwicklung }}</a>
+              {% if show_knowledge_management %}
               <a href="{{ site.baseurl }}{{ nav_docs_path }}" role="menuitem" class="block px-4 py-2.5 text-sm text-gray-800 transition hover:bg-brand-100 hover:text-accent-600 dark:text-gray-200 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == nav_docs_path %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ nav_strings.documentation_engineering }}</a>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -286,11 +291,11 @@
         <button
           id="toggle-color-mode"
           type="button"
-          class="flex h-9 w-9 items-center justify-center rounded-full border border-brand-200 text-gray-700 transition hover:bg-brand-100 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600 dark:border-zinc-700/80 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200 dark:focus-visible:outline-accent-400"
+          class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-700 text-gray-700 transition hover:bg-brand-100 hover:border-gray-800 hover:text-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600 dark:border-zinc-400 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:border-zinc-300 dark:hover:text-zinc-300 dark:focus-visible:outline-accent-400"
           aria-label="{{ header_strings.footer.theme_toggle_label }}"
           aria-pressed="false"
         >
-          {% include icons/theme-toggle.html class="w-5 h-5 text-gray-600 dark:text-gray-300" %}
+          {% include icons/theme-toggle.html class="h-5 w-5" %}
         </button>
         <div class="flex items-center gap-1">
           {{ language_switcher }}
@@ -327,7 +332,9 @@
         <a href="{{ site.baseurl }}{{ nav_thesis_path }}" class="rounded-md px-3 py-1 pl-5 transition hover:bg-brand-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == nav_thesis_path %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ nav_strings.thesis }}</a>
         <p class="px-3 pb-0.5 pt-1.5 text-xs font-semibold uppercase tracking-wide text-gray-600 dark:text-zinc-300">{{ nav_strings.field }}</p>
         <a href="{{ site.baseurl }}{{ nav_software_path }}" class="rounded-md px-3 py-1 pl-5 transition hover:bg-brand-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == nav_software_path %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ nav_strings.webentwicklung }}</a>
+        {% if show_knowledge_management %}
         <a href="{{ site.baseurl }}{{ nav_docs_path }}" class="rounded-md px-3 py-1 pl-5 transition hover:bg-brand-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == nav_docs_path %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ nav_strings.documentation_engineering }}</a>
+        {% endif %}
         <p class="px-3 pb-0.5 pt-1.5 text-xs font-semibold uppercase tracking-wide text-gray-600 dark:text-zinc-300">{{ nav_strings.projects }}</p>
         {% for project in nav_projects_list %}
         <a href="{{ project.url }}" class="rounded-md px-3 py-1 pl-5 transition hover:bg-brand-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400 {% if page.url == project.url %}font-semibold text-accent-600 dark:text-accent-400{% endif %}">{{ project.title }}</a>

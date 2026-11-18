@@ -30,7 +30,9 @@
           <p class="font-medium text-gray-900 dark:text-gray-100">{{ footer.focus }}</p>
           <div class="flex flex-col gap-3">
             <a href="{{ site.baseurl }}{{ lang_prefix }}/software-development/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.webentwicklung }}</a>
+            {% if site.features.knowledge_management %}
             <a href="{{ site.baseurl }}{{ lang_prefix }}/knowledge-management/" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ nav.documentation_engineering }}</a>
+            {% endif %}
             {% for project in footer_projects %}
             <a href="{{ project.url }}" class="text-gray-800 transition hover:text-accent-600 dark:text-gray-300 dark:hover:text-accent-400">{{ project.title }}</a>
             {% endfor %}

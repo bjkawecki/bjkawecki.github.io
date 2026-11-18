@@ -3,7 +3,7 @@ layout: post
 date: 2026-05-02
 title: "Quality Benchmarks for Learning Software"
 description: "How do you actually judge good learning software, and what must it deliver? I would like to mention a few, maybe less obvious, quality markers and explain..."
-category: Didactics
+category: Learning Software
 lang: en
 locale: en
 page_id: messwerte-guter-lernsoftware

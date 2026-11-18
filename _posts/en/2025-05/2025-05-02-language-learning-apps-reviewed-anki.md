@@ -3,7 +3,7 @@ layout: post
 date: 2025-05-02
 title: "Language Learning Apps Reviewed: Anki"
 description: "The app is based on the principle of spaced repetition, meaning systematic repetition at increasing intervals—a method that is particularly effective for..."
-category: Russian
+category: Learning Software
 lang: en
 locale: en
 page_id: lern-apps-anki

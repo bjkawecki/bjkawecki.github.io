@@ -3,7 +3,7 @@ layout: post
 date: 2026-05-02
 title: "Messwerte guter Lernsoftware"
 description: "Woran bemisst sich eigentlich gute Lernsoftware und was muss sie leisten? Ich möchte ein paar – vielleicht etwas weniger offensichtliche –..."
-category: Didaktik
+category: Lernsoftware
 lang: de
 locale: de
 page_id: messwerte-guter-lernsoftware

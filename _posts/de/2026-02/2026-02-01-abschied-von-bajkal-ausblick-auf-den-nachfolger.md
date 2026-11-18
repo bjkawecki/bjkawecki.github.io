@@ -3,7 +3,7 @@ layout: post
 date: 2026-02-01
 title: "Abschied von Bajkal, Ausblick auf den Nachfolger"
 description: "Ich habe die Arbeit an meiner Russisch-Sprachlernapp „Bajkal“ eingestellt. Entsprechend ist die Anwendung unter der Domain bajkal-app.de seit einigen..."
-category: Russisch
+category: Filingo
 lang: de
 locale: de
 page_id: abschied-bajkal

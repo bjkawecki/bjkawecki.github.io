@@ -15,6 +15,11 @@
   </div>
     <div class="grid gap-10 md:grid-cols-2">
     {% for item in fachgebiete.items %}
+    {% assign is_km = false %}
+    {% if item.href == '/knowledge-management/' %}
+      {% assign is_km = true %}
+    {% endif %}
+    {% if is_km == false or site.features.knowledge_management %}
     {% assign item_href = lang_prefix | append: item.href %}
     <article class="space-y-3 border-t border-gray-200 pt-8 dark:border-zinc-700">
       <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
@@ -28,6 +33,7 @@
         {% include icons/arrow-right.html class="ml-1 h-4 w-4" %}
       </a>
     </article>
+    {% endif %}
     {% endfor %}
   </div>
 </section>

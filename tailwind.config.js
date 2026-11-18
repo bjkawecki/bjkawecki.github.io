@@ -19,18 +19,46 @@ module.exports = {
         sans: ['"Golos Text"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        // Probe: neutrales Hellgrau (kein Weiß, kein Mantine-Blaugrau) + Filingo dark
         brand: {
-          50: "#ebe4dc",
-          100: "#e2d9cf",
-          200: "#cfc2b4",
-          300: "#b5a494",
-          400: "#968575",
-          500: "#7a6b5d",
-          600: "#5c5650",
-          700: "#3a4550",
-          800: "#252a30",
-          900: "#1a1c1b",
-          950: "#161918",
+          50: "#eeeeef", // page
+          100: "#f5f5f5", // cards (leicht heller, weniger Kontrast)
+          200: "#d4d4d8", // borders
+          300: "#a1a1aa",
+          400: "#868e96",
+          500: "#495057",
+          600: "#343a40",
+          700: "#2e2e2e",
+          800: "#242424",
+          900: "#1f1f1f",
+          950: "#242424",
+        },
+        gray: {
+          50: "#eeeeef",
+          100: "#f5f5f5",
+          200: "#e4e4e7",
+          300: "#d4d4d8",
+          400: "#a1a1aa",
+          500: "#71717a",
+          600: "#868e96",
+          700: "#495057",
+          800: "#343a40",
+          900: "#212529",
+          950: "#141414",
+        },
+        // Dark-Mode-Flächen ≈ Mantine dark-Skala
+        zinc: {
+          50: "#f8f9fa",
+          100: "#f1f3f5",
+          200: "#e9ecef",
+          300: "#c9c9c9", // dark-0
+          400: "#b8b8b8", // dark-1
+          500: "#828282", // dark-2
+          600: "#424242", // dark-4
+          700: "#3b3b3b", // dark-5
+          800: "#2e2e2e", // dark-6
+          900: "#242424", // dark-7
+          950: "#141414", // dark-9
         },
         accent: {
           50: "var(--accent-50)",

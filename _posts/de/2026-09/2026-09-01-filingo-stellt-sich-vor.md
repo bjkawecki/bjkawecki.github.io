@@ -61,17 +61,9 @@ Filingo soll die anderen Online-Wörterbücher für Russisch nicht ersetzen, abe
 
 Neu hinzugekommen sind außerdem verschiedene Funktionen, die es bei Bajkal in dieser Form noch nicht gab. Beim Lernen sammeln Nutzer nun Punkte, schalten Erfolge frei und können sich im Ranking mit anderen messen.
 
-Ich sehr übermäßige Gamification allgemein kritisch. In Filingo sollen daher Punkte, Erfolge und ein Ranking vor allem zusätzliche Motivation liefern – nicht den eigentlichen Lernprozess bestimmen. 
+Ich sehe übermäßige Gamification allgemein kritisch. In Filingo sollen daher Punkte, Erfolge und ein Ranking vor allem zusätzliche Motivation liefern – nicht den eigentlichen Lernprozess bestimmen. 
 
 Auch die individuellen Einstellungsmöglichkeiten werden umfangreicher. Unter anderem lässt sich ein persönliches tägliches Lernziel festlegen, und auch die Gestaltung der Anwendung kann stärker an die eigenen Vorlieben angepasst werden.
-
-## Dieser Blog
-
-Mit dem Start von Filingo gibt es auch eine Änderung bei der Einordnung dieses Blogs.
-
-Früher war er Teil meiner <a class="link-external" href="https://bjoernkawecki.de" target="_blank" rel="noopener noreferrer">persönlichen Webseite{% include icons/external-link.html %}</a>. Jetzt ist er unter [blog.filingo.app](https://blog.filingo.app/) der zentrale Ort für Texte zu Filingo, digitaler Didaktik und dem Lernen der russischen Sprache. Hier dokumentiere ich nicht nur Neuigkeiten zum Projekt, sondern auch einige der Gedanken und Entscheidungen hinter der Entwicklung.
-
-Themen, die nichts mit diesen Bereichen zu tun haben, bleiben auf meiner persönlichen Webseite.
 
 ## Wie es weitergeht
 

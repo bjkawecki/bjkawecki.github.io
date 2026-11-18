@@ -25,6 +25,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username:
 github_username: bjkawecki
 
+# Seiten-Sichtbarkeit (true = in Nav/Footer/Home wieder einblenden)
+features:
+  knowledge_management: true
+
 # Build settings
 # theme: minima
 

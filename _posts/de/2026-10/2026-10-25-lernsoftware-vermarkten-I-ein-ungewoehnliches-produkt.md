@@ -5,7 +5,7 @@ lang: de
 locale: de
 title: "Lernsoftware vermarkten I: Ein ungewöhnliches Produkt?"
 description: "Wie vermarktet man ein Produkt, dessen Wert von einer Leistung abhängt, die der Kunde selbst erbringen muss?"
-category: Vermarktung
+category: Lernsoftware
 page_id: lernsoftware-vermarkten-I
 series: courseware-marketing
 series_order: 1

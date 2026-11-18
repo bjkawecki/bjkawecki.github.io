@@ -3,7 +3,7 @@ layout: post
 date: 2026-02-01
 title: "Saying Goodbye to Bajkal, Looking Ahead to Its Successor"
 description: "I have discontinued work on my Russian language learning web app “Bajkal”. As a result, the application has not been accessible under the domain..."
-category: Russian
+category: Filingo
 lang: en
 locale: en
 page_id: abschied-bajkal

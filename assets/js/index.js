@@ -7,7 +7,7 @@ const mobileNavIconOpen = document.getElementById("mobile-nav-icon-open");
 const mobileNavIconClose = document.getElementById("mobile-nav-icon-close");
 const rootElement = document.documentElement;
 const lightModeSvgElement = `
-<svg class="w-5 h-5 text-gray-600 dark:text-gray-300"
+<svg class="h-5 w-5"
    xmlns="http://www.w3.org/2000/svg"
    fill="currentColor"
    viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ const lightModeSvgElement = `
 </svg>
 `;
 const darkModeSvgElement = `
-<svg class="w-5 h-5 text-gray-600 dark:text-gray-300"
+<svg class="h-5 w-5"
    xmlns="http://www.w3.org/2000/svg"
    fill="currentColor"
    viewBox="0 0 24 24">

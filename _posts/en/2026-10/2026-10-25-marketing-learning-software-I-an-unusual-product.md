@@ -5,7 +5,7 @@ lang: en
 locale: en
 title: "Marketing Learning Software I: An Unusual Product?"
 description: "How do you market a product whose value depends on work the customer has to do themselves?"
-category: Marketing
+category: Learning Software
 page_id: lernsoftware-vermarkten-I
 series: courseware-marketing
 series_order: 1

@@ -3,7 +3,7 @@ layout: post
 date: 2026-02-11
 title: "Language Learning Apps Reviewed: Babbel"
 description: "Babbel is often contrasted with Duolingo—as the more structured platform with a stronger focus on grammar and practical use. I wanted to see how that..."
-category: Russian
+category: Learning Software
 lang: en
 locale: en
 page_id: lern-apps-babbel
